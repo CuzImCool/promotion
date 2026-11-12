@@ -1,128 +1,190 @@
 
-<div class="promotion-box">
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Club Promotions</title>
 
-  <style>
-    .promotion-box {
-      background: #050505;
-      border: 2px solid #9b65ff;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      box-shadow: 0 0 12px #8b45ff55;
-      color: white;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    .promotion-box summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 14px;
-      border: 1px solid #b68aff;
-      border-radius: 10px;
-      background: linear-gradient(120deg, #24103d, #090014);
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      transition: 0.3s;
-    }
+body {
+  margin: 0;
+  padding: 30px 15px;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
 
-    .promotion-box summary::-webkit-details-marker {
-      display: none;
-    }
+.promotion {
+  max-width: 550px;
+  margin: auto;
+  padding: 22px;
+  background: #050505;
+  border: 2px solid #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 14px #ffffff22;
+  text-align: center;
+}
 
-    .promotion-box summary:hover {
-      box-shadow: 0 0 18px #a65cff;
-      background: #30134f;
-    }
+h1 {
+  color: #fff;
+  letter-spacing: 6px;
+  font-size: 27px;
+  margin: 8px 0;
+}
 
-    .promotion-box .arrow {
-      display: inline-block;
-      margin-left: 8px;
-      transition: transform 0.3s;
-    }
+.subtitle {
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
 
-    .promotion-box details[open] .arrow {
-      transform: rotate(180deg);
-    }
+.rank-button {
+  width: 100%;
+  padding: 16px;
+  margin: 9px 0;
+  background: #080808;
+  border: 1px solid #fff;
+  border-radius: 9px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-    .promotion-box .requirements {
-      padding: 12px 5px 4px;
-      text-align: left;
-      animation: promotionOpen 0.35s ease;
-    }
+.rank-button:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 15px #ffffff66;
+}
 
-    .promotion-box .rank {
-      border: 1px solid #7546a8;
-      border-radius: 10px;
-      padding: 12px;
-      margin: 12px 0;
-      background: #100b18;
-    }
+.rank-button.active {
+  background: #fff;
+  color: #000;
+}
 
-    .promotion-box h3 {
-      margin: 0 0 9px;
-      color: #c99aff;
-      font-size: 16px;
-    }
+.requirements {
+  display: none;
+  margin: 8px 0 18px;
+  padding: 17px;
+  background: #0a0a0a;
+  border: 1px solid #777;
+  border-radius: 9px;
+  text-align: left;
+  animation: appear 0.3s ease;
+}
 
-    .promotion-box p {
-      font-size: 13px;
-      line-height: 1.6;
-      margin: 5px 0;
-      color: #eeeeee;
-    }
+.requirements.show {
+  display: block;
+}
 
-    .promotion-box .footer {
-      text-align: center;
-      color: #b68aff;
-      margin-top: 14px;
-      letter-spacing: 2px;
-      font-size: 11px;
-    }
+.requirements h2 {
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 2px;
+  margin-top: 0;
+}
 
-    @keyframes promotionOpen {
-      from { opacity: 0; transform: translateY(-8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+.requirements p {
+  color: #ddd;
+  font-size: 14px;
+  line-height: 1.7;
+}
 
-  <details>
-    <summary>
-      ♟ PROMOTION ♟
-      <span class="arrow">▼</span>
-    </summary>
+.footer {
+  color: #aaa;
+  font-size: 11px;
+  letter-spacing: 3px;
+  margin-top: 22px;
+}
 
-    <div class="requirements">
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
 
-      <h3 style="text-align:center;">HOW TO GET PROMOTED</h3>
+<body>
 
-      <div class="rank">
-        <h3>👑 SUPER ADMIN</h3>
-        <p>• Invite <b>30 members</b> to the club.</p>
-        <p>• Once all 30 have joined, message me to claim your promotion!</p>
-        <p>• Or just be really cool. 😉</p>
-      </div>
+<div class="promotion">
 
-      <div class="rank">
-        <h3>⭐ ADMIN</h3>
-        <p>• Be able to create at least <b>one club match per month</b>.</p>
-        <p>• Invite <b>10 members</b> to the club.</p>
-        <p>• Once all 10 have joined, message me!</p>
-      </div>
+  <h1>PROMOTION</h1>
 
-      <div class="rank">
-        <h3>🐱 COORDINATOR</h3>
-        <p>• All you need is a <b>cat profile picture!</b></p>
-        <p>• Yep, it's that simple. 🐾</p>
-      </div>
+  <div class="subtitle">
+    Choose a rank to discover how to earn it.
+  </div>
 
-      <div class="footer">
-        ★ GOOD LUCK & HAPPY RECRUITING ★
-      </div>
+  <button class="rank-button" onclick="showRank('super', this)">
+    SUPER ADMIN
+  </button>
 
-    </div>
-  </details>
+  <div class="requirements" id="super">
+    <h2>SUPER ADMIN</h2>
+    <p>• Invite <b>30 members</b> to the club.</p>
+    <p>• Once all 30 members have joined, message me to claim your promotion!</p>
+    <p>• Or just be really cool.</p>
+  </div>
+
+  <button class="rank-button" onclick="showRank('admin', this)">
+    ADMIN
+  </button>
+
+  <div class="requirements" id="admin">
+    <h2>ADMIN</h2>
+    <p>• Be able to create at least <b>one club match per month</b>.</p>
+    <p>• Invite <b>10 members</b> to the club.</p>
+    <p>• Once all 10 members have joined, message me!</p>
+  </div>
+
+  <button class="rank-button" onclick="showRank('coordinator', this)">
+    COORDINATOR
+  </button>
+
+  <div class="requirements" id="coordinator">
+    <h2>COORDINATOR</h2>
+    <p>• All you need is a <b>cat profile picture!</b></p>
+    <p>• Yep, it's that simple.</p>
+  </div>
+
+  <div class="footer">
+    GOOD LUCK & HAPPY RECRUITING
+  </div>
+
 </div>
+
+<script>
+function showRank(id, button) {
+  const selected = document.getElementById(id);
+  const alreadyOpen = selected.classList.contains("show");
+
+  document.querySelectorAll(".requirements").forEach(box => {
+    box.classList.remove("show");
+  });
+
+  document.querySelectorAll(".rank-button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  if (!alreadyOpen) {
+    selected.classList.add("show");
+    button.classList.add("active");
+  }
+}
+</script>
+
+</body>
+</html>
+
